@@ -60,6 +60,7 @@ function ServiceDetails({ category }) {
             <a href="/#work">Our clients</a>
             <a href="/certifications.html">Registrations &amp; Certifications</a>
             <a href="/project-gallery.html">Project Gallery</a>
+            <a href="/flyers.html">Flyers</a>
           </nav>
           <a className="header-cta" href="/#contact">Start a project <Arrow diagonal /></a>
         </div>

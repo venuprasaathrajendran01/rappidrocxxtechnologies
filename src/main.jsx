@@ -6,6 +6,7 @@ import ServiceDetails from "./ServiceDetails.jsx";
 import CertificationsPage from "./Certifications.jsx";
 import PaymentsPage from "./Payments.jsx";
 import ProjectGalleryPage from "./ProjectGallery.jsx";
+import FlyersPage from "./Flyers.jsx";
 import { initializeFestivalMode } from "./festivalMode.js";
 import { initializePageTransitions } from "./pageTransitions.js";
 import { serviceCategories } from "./serviceData.js";
@@ -28,6 +29,8 @@ createRoot(document.getElementById("root")).render(
       <PaymentsPage />
     ) : window.location.pathname === "/project-gallery.html" ? (
       <ProjectGalleryPage />
+    ) : window.location.pathname === "/flyers.html" ? (
+      <FlyersPage />
     ) : serviceCategory ? (
       <ServiceDetails category={serviceCategory} />
     ) : (

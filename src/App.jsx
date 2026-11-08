@@ -101,6 +101,7 @@ function App() {
             <a href="/certifications.html" onClick={closeMenu}>Registrations &amp; Certifications</a>
             <a href="/payments.html" onClick={closeMenu}>Payments &amp; Options</a>
             <a href="/project-gallery.html" onClick={closeMenu}>Project Gallery</a>
+            <a href="/flyers.html" onClick={closeMenu}>Flyers</a>
           </nav>
           <a className="header-cta" href="#contact">Start a project <Arrow diagonal /></a>
         </div>
@@ -257,6 +258,14 @@ function App() {
                 </article>
               </a>
             ))}
+            <a className="service-row-link" href="/flyers.html">
+              <article>
+                <span>05</span>
+                <h3>Flyers</h3>
+                <p>Creative flyer designs for portfolios, startups and corporate businesses.</p>
+                <Arrow diagonal />
+              </article>
+            </a>
           </div>
         </section>
 

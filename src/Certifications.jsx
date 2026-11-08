@@ -113,6 +113,7 @@ function CertificationsPage() {
             <a href="/certifications.html" onClick={closeMenu}>Registrations &amp; Certifications</a>
             <a href="/payments.html" onClick={closeMenu}>Payments &amp; Options</a>
             <a href="/project-gallery.html" onClick={closeMenu}>Project Gallery</a>
+            <a href="/flyers.html" onClick={closeMenu}>Flyers</a>
           </nav>
           <a className="header-cta" href="/#contact">Start a project <Arrow diagonal /></a>
         </div>

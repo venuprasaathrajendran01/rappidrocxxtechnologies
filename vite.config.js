@@ -9,6 +9,7 @@ export default defineConfig({
         "certifications.html",
         "payments.html",
         "project-gallery.html",
+        "flyers.html",
         "services-software.html",
         "services-design.html",
         "services-media.html",
