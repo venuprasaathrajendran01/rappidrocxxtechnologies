@@ -625,6 +625,9 @@ body.certificate-lightbox-open { overflow: hidden; }
   .project-gallery-card-copy { padding: 11px 2px 3px; }
   .project-gallery-card-copy h2 { font-size: 15px; }
   .project-gallery-card-copy > span { font-size: 7px; }
+  .project-gallery-card-title { align-items: stretch; flex-direction: column; gap: 8px; }
+  .project-gallery-card-title h2 { min-height: 2.4em; }
+  .project-gallery-card-title .pill-button { align-self: flex-end; }
   .project-gallery-cta { min-height: 130px; flex-wrap: wrap; gap: 11px 18px; padding-block: 22px; }
   .project-gallery-cta > p { width: 100%; margin-right: 0; font-size: 19px; }
   .payments-intro { padding-top: 62px; padding-bottom: 37px; }
@@ -694,11 +697,12 @@ body.certificate-lightbox-open { overflow: hidden; }
 }
 
 @media (max-width: 680px) {
-  .service-page-header { width: calc(100% - 42px); grid-template-columns: 1fr auto; gap: 12px;     .project-gallery-grid { grid-template-columns: 1fr; gap: 20px; }
-    .project-gallery-card { width: min(100%, 430px); justify-self: center; padding: 10px; }
-    .project-gallery-card-copy h2 { font-size: 17px; }
-    .project-gallery-card-copy > span { font-size: 8px; }
-  }
+  .service-page-header { width: calc(100% - 42px); grid-template-columns: 1fr auto; gap: 12px; }
+  .project-gallery-grid { grid-template-columns: 1fr; gap: 20px; }
+  .project-gallery-card { width: min(100%, 430px); justify-self: center; padding: 10px; }
+  .project-gallery-card-copy h2 { font-size: 17px; }
+  .project-gallery-card-copy > span { font-size: 8px; }
+  .project-gallery-card-title h2 { min-height: 1.2em; }
   .service-page-nav { display: none; }
   .service-page-header .header-cta { grid-column: 2; grid-row: 1; }
   .service-detail-hero { min-height: 0; grid-template-columns: 1fr; gap: 31px; padding-block: 48px 67px; }
