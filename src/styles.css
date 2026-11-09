@@ -620,7 +620,7 @@ body.certificate-lightbox-open { overflow: hidden; }
   .project-gallery-intro-grid h1 { font-size: clamp(49px, 12vw, 68px); }
   .project-gallery-intro-copy { font-size: 13px; }
   .project-gallery-section { padding-block: 47px 57px; }
-  .project-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .project-gallery-grid { grid-template-columns: 1fr; gap: 20px; }
   .project-gallery-card { padding: 8px; }
   .project-gallery-card-copy { padding: 11px 2px 3px; }
   .project-gallery-card-copy h2 { font-size: 15px; }
@@ -698,7 +698,6 @@ body.certificate-lightbox-open { overflow: hidden; }
 
 @media (max-width: 680px) {
   .service-page-header { width: calc(100% - 42px); grid-template-columns: 1fr auto; gap: 12px; }
-  .project-gallery-grid { grid-template-columns: 1fr; gap: 20px; }
   .project-gallery-card { width: min(100%, 430px); justify-self: center; padding: 10px; }
   .project-gallery-card-copy h2 { font-size: 17px; }
   .project-gallery-card-copy > span { font-size: 8px; }
