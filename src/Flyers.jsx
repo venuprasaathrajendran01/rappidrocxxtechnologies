@@ -7,13 +7,13 @@ const flyerGroups = [
     posters: [
       {
         src: "/flyers/portfolio/pfl-2.jpg",
-        alt: "Portfolio flyer design",
-        title: "Portfolio Flyer",
+        alt: "Advanced portfolio website flyer",
+        title: "Portfolio (Advanced)",
       },
       {
         src: "/flyers/portfolio/portfolio.jpg",
-        alt: "Portfolio promotional poster",
-        title: "Portfolio Poster",
+        alt: "Simple portfolio website flyer",
+        title: "Portfolio (Basic)",
       },
     ],
   },
@@ -23,32 +23,71 @@ const flyerGroups = [
     posters: [
       {
         src: "/flyers/startup-corporate-businesses/fly-1.jpg",
-        alt: "Startup and corporate business flyer design",
-        title: "Business Flyer 01",
+        alt: "Startup website flyer",
+        title: "Startup Website",
       },
       {
         src: "/flyers/startup-corporate-businesses/scb-fly-2.jpg",
-        alt: "Startup and corporate business flyer design",
-        title: "Business Flyer 02",
+        alt: "Corporate company website flyer",
+        title: "Corporate Company Website",
       },
       {
         src: "/flyers/startup-corporate-businesses/scb-fly-3.jpg",
-        alt: "Startup and corporate business flyer design",
-        title: "Business Flyer 03",
+        alt: "IT and software company website flyer",
+        title: "IT / Software Company Website",
       },
       {
         src: "/flyers/startup-corporate-businesses/srb-fly-4.jpg",
-        alt: "Startup and corporate business flyer design",
-        title: "Business Flyer 04",
+        alt: "Grocery store website flyer",
+        title: "Grocery Store Website",
       },
       {
         src: "/flyers/startup-corporate-businesses/srb-fly-5.jpg",
-        alt: "Startup and corporate business flyer design",
-        title: "Business Flyer 05",
+        alt: "Textile and clothing store website flyer",
+        title: "Textile / Clothing Store Website",
+      },
+    ],
+  },
+  {
+    title: "Food and Hospitality",
+    category: "FOOD AND HOSPITALITY",
+    posters: [
+      {
+        src: "/flyers/food-and-hospitality/food-hospitality-fly-3.jpg",
+        alt: "Restaurant website flyer",
+        title: "Restaurant Website",
+      },
+      {
+        src: "/flyers/food-and-hospitality/food-hospitality-fly-4.jpg",
+        alt: "Bakery and cake shop website flyer",
+        title: "Bakery / Cake Shop Website",
+      },
+      {
+        src: "/flyers/food-and-hospitality/food-hospitality-fly-5.jpg",
+        alt: "Hotel and resort website flyer",
+        title: "Hotel / Resort Website",
+      },
+    ],
+  },
+  {
+    title: "Shops and Retail Business",
+    category: "SHOPS AND RETAIL BUSINESS",
+    posters: [
+      {
+        src: "/flyers/shops-and-retail-business/shops-retail-fly-1.jpg",
+        alt: "Jewellery shop website flyer",
+        title: "Jewellery Shop Website",
+      },
+      {
+        src: "/flyers/shops-and-retail-business/shops-retail-fly-2.jpg",
+        alt: "Electronics and mobile shop website flyer",
+        title: "Electronics / Mobile Shop Website",
       },
     ],
   },
 ];
+
+const whatsappNumber = "917598441973";
 
 function Arrow({ diagonal = false }) {
   return (
@@ -141,7 +180,19 @@ function FlyersPage() {
                     </div>
                     <div className="project-gallery-card-copy">
                       <span>{group.category}</span>
-                      <h2>{poster.title}</h2>
+                      <div className="project-gallery-card-title">
+                        <h2>{poster.title}</h2>
+                        <a
+                          className="pill-button pill-dark"
+                          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                            `Hi, I'm interested in the ${poster.title} from your ${group.title} collection. Please share more details.`
+                          )}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Enquire Now
+                        </a>
+                      </div>
                     </div>
                   </article>
                 ))}

@@ -51,6 +51,7 @@ function Brand({ footer = false }) {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState(0);
+  const [contactOptionsOpen, setContactOptionsOpen] = useState(false);
 
   useEffect(() => {
     const revealElements = document.querySelectorAll(".reveal");
@@ -330,12 +331,35 @@ function App() {
               <div className="contact-info">
                 <span>HAVE SOMETHING IN MIND?</span>
                 <a href="mailto:rappidrocxx@gmail.com">rappidrocxx@gmail.com</a>
-                <a href="tel:+917598441973">+91 75984 41973</a>
+                <a
+                  href="#contact-phone-options"
+                  aria-expanded={contactOptionsOpen}
+                  aria-controls="contact-phone-options"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    setContactOptionsOpen(!contactOptionsOpen);
+                  }}
+                >
+                  +91 75984 41973
+                </a>
+                {contactOptionsOpen && (
+                  <div id="contact-phone-options">
+                    <a href="tel:+917598441973">Call</a>
+                    <a
+                      href="https://wa.me/917598441973"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
+                )}
               </div>
               <div className="contact-info contact-location">
                 <span>FIND US</span>
                 <p>Gobichettipalayam<br />Tamil Nadu, India</p>
-                <a href="https://www.instagram.com/RappidRocxX/" target="_blank" rel="noreferrer">Instagram <Arrow diagonal /></a>
+                <a href="https://www.instagram.com/rappidrocxxtechnologies?dlrf=MXRybXg5a2F5ZjJmYQ==" target="_blank" rel="noreferrer">Instagram <Arrow diagonal /></a>
+                <a href="https://www.linkedin.com/company/rapidrocxxtechnologies?trk=blended-typeahead&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadB1rbCp76kHJaWt7VozGozZzVWbzEaYMgNk8Fm8puOBZuHI8PCmTU-4GJSPg_aem_wTwVWttXKXDKxO_qzUbWmQ" target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
               </div>
               <Brand footer />
               <span className="copyright">© {new Date().getFullYear()} Rappid RocxX. All rights reserved.</span>
