@@ -9,11 +9,13 @@ const flyerGroups = [
         src: "/flyers/portfolio/pfl-2.jpg",
         alt: "Advanced portfolio website flyer",
         title: "Portfolio (Advanced)",
+        amount: 4999,
       },
       {
         src: "/flyers/portfolio/portfolio.jpg",
         alt: "Simple portfolio website flyer",
         title: "Portfolio (Basic)",
+        amount: 799,
       },
     ],
   },
@@ -25,26 +27,31 @@ const flyerGroups = [
         src: "/flyers/startup-corporate-businesses/fly-1.jpg",
         alt: "Startup website flyer",
         title: "Startup Website",
+        amount: 3499,
       },
       {
         src: "/flyers/startup-corporate-businesses/scb-fly-2.jpg",
         alt: "Corporate company website flyer",
         title: "Corporate Company Website",
+        amount: 5999,
       },
       {
         src: "/flyers/startup-corporate-businesses/scb-fly-3.jpg",
         alt: "IT and software company website flyer",
         title: "IT / Software Company Website",
+        amount: 7999,
       },
       {
         src: "/flyers/startup-corporate-businesses/srb-fly-4.jpg",
         alt: "Grocery store website flyer",
         title: "Grocery Store Website",
+        amount: 3499,
       },
       {
         src: "/flyers/startup-corporate-businesses/srb-fly-5.jpg",
         alt: "Textile and clothing store website flyer",
         title: "Textile / Clothing Store Website",
+        amount: 4599,
       },
     ],
   },
@@ -56,16 +63,19 @@ const flyerGroups = [
         src: "/flyers/food-and-hospitality/food-hospitality-fly-3.jpg",
         alt: "Restaurant website flyer",
         title: "Restaurant Website",
+        amount: 4999,
       },
       {
         src: "/flyers/food-and-hospitality/food-hospitality-fly-4.jpg",
         alt: "Bakery and cake shop website flyer",
         title: "Bakery / Cake Shop Website",
+        amount: 2999,
       },
       {
         src: "/flyers/food-and-hospitality/food-hospitality-fly-5.jpg",
         alt: "Hotel and resort website flyer",
         title: "Hotel / Resort Website",
+        amount: 10999,
       },
     ],
   },
@@ -77,17 +87,105 @@ const flyerGroups = [
         src: "/flyers/shops-and-retail-business/shops-retail-fly-1.jpg",
         alt: "Jewellery shop website flyer",
         title: "Jewellery Shop Website",
+        amount: 5999,
       },
       {
         src: "/flyers/shops-and-retail-business/shops-retail-fly-2.jpg",
         alt: "Electronics and mobile shop website flyer",
         title: "Electronics / Mobile Shop Website",
+        amount: 2899,
+      },
+    ],
+  },
+  {
+    title: "Automotive and Construction",
+    category: "AUTOMOTIVE AND CONSTRUCTION",
+    posters: [
+      {
+        src: "/flyers/automotive-construction/car-bike-showroom.jpg",
+        alt: "Car and bike showroom website flyer",
+        title: "Car / Bike Showroom Website",
+        amount: 6999,
+      },
+      {
+        src: "/flyers/automotive-construction/construction-company.jpg",
+        alt: "Construction company website flyer",
+        title: "Construction Company Website",
+        amount: 6999,
+      },
+    ],
+  },
+  {
+    title: "Education",
+    category: "EDUCATION",
+    posters: [
+      {
+        src: "/flyers/education/school.jpg",
+        alt: "School website flyer",
+        title: "School Website",
+        amount: 5999,
+      },
+      {
+        src: "/flyers/education/coaching-training-institute.jpg",
+        alt: "Coaching and training institute website flyer",
+        title: "Coaching / Training Institute Website",
+        amount: 4999,
+      },
+      {
+        src: "/flyers/education/music-dance-academy.jpg",
+        alt: "Music and dance academy website flyer",
+        title: "Music / Dance Academy Website",
+        amount: 4499,
+      },
+    ],
+  },
+  {
+    title: "Healthcare",
+    category: "HEALTHCARE",
+    posters: [
+      {
+        src: "/flyers/healthcare/hospital.jpg",
+        alt: "Hospital website flyer",
+        title: "Hospital Website",
+        amount: 9899,
+      },
+      {
+        src: "/flyers/healthcare/clinic-dental-clinic.jpg",
+        alt: "Clinic and dental clinic website flyer",
+        title: "Clinic / Dental Clinic Website",
+        amount: 5999,
+      },
+      {
+        src: "/flyers/healthcare/medical-laboratory.jpg",
+        alt: "Medical laboratory website flyer",
+        title: "Medical Laboratory Website",
+        amount: 5999,
+      },
+    ],
+  },
+  {
+    title: "Real Estate and Interior Design",
+    category: "REAL ESTATE AND INTERIOR DESIGN",
+    posters: [
+      {
+        src: "/flyers/real-estate-interior-design/real-estate-agency.jpg",
+        alt: "Real estate agency website flyer",
+        title: "Real Estate Agency Website",
+        amount: 6999,
+      },
+      {
+        src: "/flyers/real-estate-interior-design/interior-design-company.jpg",
+        alt: "Interior design company website flyer",
+        title: "Interior Design Company Website",
+        amount: 5999,
       },
     ],
   },
 ];
 
 const whatsappNumber = "917598441973";
+const upiId = "venuprasaath265@okicici";
+const upiPayeeName = "Venu Prasaath Rajendran";
 
 function Arrow({ diagonal = false }) {
   return (
@@ -182,16 +280,42 @@ function FlyersPage() {
                       <span>{group.category}</span>
                       <div className="project-gallery-card-title">
                         <h2>{poster.title}</h2>
-                        <a
-                          className="pill-button pill-dark"
-                          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                            `Hi, I'm interested in the ${poster.title} from your ${group.title} collection. Please share more details.`
-                          )}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Enquire Now
-                        </a>
+                        <div className="project-gallery-card-actions">
+                          <a
+                            className="pill-button pill-dark"
+                            href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                              `Hi, I'm interested in the ${poster.title} from your ${group.title} collection. Please share more details.`
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Enquire Now
+                          </a>
+                          <a
+                            className="pill-button pill-outline"
+                            href={`upi://pay?${new URLSearchParams({
+                              pa: upiId,
+                              pn: upiPayeeName,
+                              am: poster.amount.toFixed(2),
+                              cu: "INR",
+                              tn: `Payment for ${poster.title}`,
+                            }).toString()}`}
+                          >
+                            Pay Now
+                          </a>
+                          <a
+                            className="pill-button pill-outline"
+                            href={`upi://pay?${new URLSearchParams({
+                              pa: upiId,
+                              pn: upiPayeeName,
+                              am: (poster.amount / 2).toFixed(2),
+                              cu: "INR",
+                              tn: `Advance payment for ${poster.title}`,
+                            }).toString()}`}
+                          >
+                            Make Advance
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </article>
